@@ -18,18 +18,20 @@ const SelectCategory = ({setSelectValue}) => {
         setSelectValue(textSelect.current.value);
     }
     
-
   return (
-    <select onChange={handleCategory} ref={textSelect}>
-        <option value={0}>all</option>
-        {
-            categories?.map(category => (
-                <option key={category.id} value={category.id}>
-                    {category.name}
-                </option>
-            ))
-        }
-    </select>
+    <div>
+        <h3>By Category</h3>
+        <select onChange={handleCategory} ref={textSelect}>
+            <option value={0}>all</option>
+            {
+                categories?.map(category => (
+                    <option key={category.id} value={category.id}>
+                        {category.name}
+                    </option>
+                ))
+            }
+        </select>
+    </div>
   )
 }
 

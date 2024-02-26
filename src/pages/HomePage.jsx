@@ -48,12 +48,15 @@ const HomePage = () => {
 
   return (
     <div>
-        <h1>Ecommerce</h1>
+      <div className='filtersContainer'>
         <button onClick={handleDark}>Dark mode</button>
         <FormPrice 
           setFormValue={setFormValue}
         />
-        <input type="text" ref={textInput} onChange={handleSearch}/>
+        <div>
+          <h3>By Name</h3>
+          <input type="text" ref={textInput} onChange={handleSearch}/>
+        </div>
         <SelectCategory 
           setSelectValue={setSelectValue}
         />
@@ -67,6 +70,7 @@ const HomePage = () => {
                 ))
             }
         </section>
+      </div>
     </div>
   )
 }

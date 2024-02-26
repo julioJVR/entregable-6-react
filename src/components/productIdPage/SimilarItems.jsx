@@ -22,7 +22,7 @@ const SimilarItems = ({categoryId, prodId}) => {
   return (
     <section>
         <h2>Discover similar items</h2>
-        <div>
+        <div className='productsContainer'>
             {
                 productsByCategory?.filter(cbFilter).map(prod => (
                     <ProductCard
