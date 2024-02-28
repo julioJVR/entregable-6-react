@@ -2,11 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 20px;
+    padding: 20px;
 }
 .filtersContainer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }

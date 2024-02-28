@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import useAuth from '../hooks/useAuth';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
 
@@ -29,6 +30,8 @@ const LoginPage = () => {
         </div>
         <button>Submit</button>
       </form>
+      <p>if you are not registered then you can 
+      <Link to='/register'>register here</Link></p>
     </div>
   )
 }

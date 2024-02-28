@@ -1,0 +1,11 @@
+.headerNav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.headerNav__list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}

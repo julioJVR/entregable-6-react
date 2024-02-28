@@ -5,6 +5,13 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --primary: #F85555;
+  --light-gray: #DCD9D9;
+  --gray: #C7C7C7;
+  --dark-gray: #4F4F4F;
+  --text-gray: #ABABAB;
+}
 body.dark {
   background-color: black;
   color: white;
@@ -27,4 +34,7 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+.container {
+  flex: 1 1;
 }

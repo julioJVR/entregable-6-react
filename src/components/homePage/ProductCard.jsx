@@ -6,15 +6,13 @@ const ProductCard = ({prod}) => {
 
         const navigate = useNavigate();
 
-        // console.log(prod);
-
         const handleView = () => {
             navigate(`/product/${prod.id}`);
         }
 
     return (
         <article className='productCard'>
-            <figure onClick={handleView} className='productCard__img'>
+            <figure className='productCard__img' onClick={handleView}>
                 <img src={prod.images[0].url} alt="product image" />
                 <img src={prod.images[1].url} alt="product image" />
             </figure>

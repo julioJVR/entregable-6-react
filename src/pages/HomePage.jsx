@@ -39,8 +39,6 @@ const HomePage = () => {
       return ByName && ByCategory && ByPrice;
     }
 
-    // console.log(selectValue);
-    // console.log(formValue);
 
     const handleDark = () => {
       body.classList.toggle('dark');

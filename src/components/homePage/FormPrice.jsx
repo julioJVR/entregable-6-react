@@ -3,6 +3,10 @@ import { useForm } from 'react-hook-form';
 
 const FormPrice = ({setFormValue}) => {
 
+    const resetAll = () => {
+        reset({ from: 0, to: Infinity });
+    };
+
     const { handleSubmit, register, reset } = useForm();
 
     const submit = (data) => {

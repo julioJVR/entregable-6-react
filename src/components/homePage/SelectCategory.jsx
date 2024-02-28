@@ -10,8 +10,6 @@ const SelectCategory = ({setSelectValue}) => {
         getCategories(url);
     }, [])
     
-    // console.log(categories);
-
     const textSelect = useRef();
 
     const handleCategory = () => {

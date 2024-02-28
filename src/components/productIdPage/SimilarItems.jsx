@@ -13,8 +13,6 @@ const SimilarItems = ({categoryId, prodId}) => {
         }
     }, [categoryId]);
     
-    // console.log(productsByCategory);
-
     const cbFilter = (prod) => {
         return prod.id !== +prodId;
     }
