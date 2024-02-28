@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { postCartThunk } from '../../store/slices/cart.slice';
-import { useDispatch } from 'react-redux';
+import { postCartThunk, updateCartThunk } from '../../store/slices/cart.slice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const InfoProduct = ({productId}) => {
 
     const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
+    const cart = useSelector(store => store.cart);
 
     const handleLess = () => {
         if (quantity > 1) {
@@ -18,11 +19,19 @@ const InfoProduct = ({productId}) => {
     }
 
     const handleAddCart = () => {
-        dispatch(postCartThunk({
-            quantity: quantity,
-            productId: productId.id,
-        }));
+        const item = cart.filter(prod => prod.productId===productId.id);
+        // console.log(item[0]);
+        if (item[0]) {
+            dispatch(updateCartThunk(...item, quantity));
+        } else {
+            dispatch(postCartThunk({
+                quantity: quantity,
+                productId: productId.id,
+            }));
+        }
     }
+
+    // console.log(productId);
 
   return (
     <div>

@@ -15,7 +15,7 @@ const ProductIdPage = () => {
     getProductId(url);
   }, [param]);
 
-  console.log(productId);
+  // console.log(productId);
     
   return (
     <div>
