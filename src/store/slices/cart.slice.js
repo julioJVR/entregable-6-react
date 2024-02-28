@@ -9,18 +9,14 @@ const cartSlice = createSlice({
     reducers: {
         addToCart: (currentValue, action) => [...currentValue, action.payload],
         deleteFromCart: (currentValue, action) => {
-            return currentValue.filter(prod => (
-                prod.id!==action.payload
-            ));
+            return currentValue.filter(prod => prod.id !== action.payload);
         },
         setCart: (currentValue, action) => action.payload,
         updateCart: (currentValue, action) => {
             const { id, quantity } = action.payload;
-            currentValue.map((prod) => (
-                prod.id===id ? 
-                prod.quantity = quantity : 
-                prod
-            ))
+            return currentValue.map((prod) => (
+                prod.id===id ?{...prod, quantity: quantity} : prod
+            ));
         },
     }
 });

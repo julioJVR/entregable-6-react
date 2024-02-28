@@ -24,6 +24,7 @@ const CartProduct = ({prod}) => {
   return (
     prod.product &&
     <div className='cartProduct'>
+        {/* ... */}
         <figure>
             <img src={prod.product.images[0].url} alt="product image" />
         </figure>
