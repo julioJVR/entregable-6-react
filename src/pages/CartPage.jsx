@@ -21,17 +21,11 @@ const CartPage = () => {
   }
   
   const handleBuy = () => {
-    const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/purchases';
-    try {
-      createBuy(url, '', getToken());
-    dispatch(setCart([]));
-    } catch (error) {
-      // Mostrar mensaje de error
-      console.error(error);
-    }
-    
+    const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/purchases';
+    createBuy(url, '', getToken());
+    dispatch(setCart([]));
   }
-
+    
   console.log(cart);
 
   return (
@@ -46,7 +40,7 @@ const CartPage = () => {
       }
       <div>
         <h3>Total by: $ {handleTotals()}</h3>
-        <button>Buy</button>
+        <button onClick={handleBuy}>Buy</button>
       </div>
     </div>
   )
