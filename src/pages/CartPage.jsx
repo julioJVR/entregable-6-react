@@ -16,8 +16,7 @@ const CartPage = () => {
   }, []);
 
   const handleTotals = () => {
-    return cart.reduce ((ac, cv) => ac + 
-    (cv.quantity * cv.product.price), 0);
+    return cart.reduce ((ac, cv) => ac + (cv.quantity * cv.product.price), 0);
   }
   
   const handleBuy = () => {
