@@ -22,8 +22,14 @@ const CartPage = () => {
   
   const handleBuy = () => {
     const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/purchases';
-    createBuy(url, '', getToken());
+    try {
+      createBuy(url, '', getToken());
     dispatch(setCart([]));
+    } catch (error) {
+      // Mostrar mensaje de error
+      console.error(error);
+    }
+    
   }
 
   console.log(cart);
